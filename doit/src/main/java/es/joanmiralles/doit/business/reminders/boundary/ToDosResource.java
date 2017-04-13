@@ -8,6 +8,7 @@ import javax.json.JsonObject;
 import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
 import java.net.URI;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @Stateless
 @Path("todos")
+@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
 public class ToDosResource {
 
     @Inject

@@ -15,6 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 @CrossCheck
+@EntityListeners(ToDoAuditor.class)
 public class ToDo implements ValidEntity {
 
     @Id

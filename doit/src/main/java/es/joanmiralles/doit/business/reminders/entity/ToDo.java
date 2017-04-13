@@ -1,7 +1,7 @@
 package es.joanmiralles.doit.business.reminders.entity;
 
 import es.joanmiralles.doit.business.validation.CrossCheck;
-import es.joanmiralles.doit.business.ValidEntity;
+import es.joanmiralles.doit.business.validation.ValidEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

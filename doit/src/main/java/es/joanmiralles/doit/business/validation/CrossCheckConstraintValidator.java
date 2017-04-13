@@ -1,7 +1,5 @@
 package es.joanmiralles.doit.business.validation;
 
-import es.joanmiralles.doit.business.ValidEntity;
-
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 

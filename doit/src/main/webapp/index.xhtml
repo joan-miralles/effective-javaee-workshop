@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:growl id="growl" life="2000" />
+            <span class="label label-info">Reminders</span>
+            <h:panelGrid columns="2" cellpadding="6">
+                <h:outputText value="Caption:"/> <input type="text" jsf:id="caption" placeholder="Enter the caption" value="#{index.toDo.caption}" class="form-control" />
+                <h:outputText value="Description:"/> <p:inputText value="#{index.toDo.description}" />
+                <h:outputText value="Priority:"/> <p:inputText value="#{index.toDo.priority}" />
+            </h:panelGrid>
+            <p:commandButton value="Save" action="#{index.save}" update="growl,reminders"/>
+            <p:dataList value="#{index.toDos}" var="toDo" type="ordered" id="reminders">
+                <f:facet name="header">
+                    Basic
+                </f:facet>
+                #{toDo.caption}, #{toDo.description}, #{toDo.priority}
+            </p:dataList>
+        </h:form>
+    </h:body>
+</html>

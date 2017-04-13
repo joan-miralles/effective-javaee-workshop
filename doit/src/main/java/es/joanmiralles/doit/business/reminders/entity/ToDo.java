@@ -71,12 +71,24 @@ public class ToDo implements ValidEntity {
         this.done = done;
     }
 
+    public void setCaption(String caption) {
+        this.caption = caption;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
     @Override
     public boolean isValid() {
         if (this.priority <= 10) {
             return true;
         }
-        return this.description != null;
+        return this.description != null && !this.description.isEmpty();
     }
 
 }

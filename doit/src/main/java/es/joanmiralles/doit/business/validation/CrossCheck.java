@@ -1,4 +1,4 @@
-package es.joanmiralles.doit.business;
+package es.joanmiralles.doit.business.validation;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

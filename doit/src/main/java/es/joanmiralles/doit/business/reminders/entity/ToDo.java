@@ -1,6 +1,6 @@
 package es.joanmiralles.doit.business.reminders.entity;
 
-import es.joanmiralles.doit.business.CrossCheck;
+import es.joanmiralles.doit.business.validation.CrossCheck;
 import es.joanmiralles.doit.business.ValidEntity;
 
 import javax.persistence.*;
@@ -92,4 +92,15 @@ public class ToDo implements ValidEntity {
         return this.description != null && !this.description.isEmpty();
     }
 
+    @Override
+    public String toString() {
+        return "ToDo{" +
+                "id=" + id +
+                ", caption='" + caption + '\'' +
+                ", description='" + description + '\'' +
+                ", priority=" + priority +
+                ", done=" + done +
+                ", version=" + version +
+                '}';
+    }
 }

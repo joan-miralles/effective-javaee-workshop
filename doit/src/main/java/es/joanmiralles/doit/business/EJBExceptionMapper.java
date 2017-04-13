@@ -1,4 +1,4 @@
-package es.joanmiralles.doit.business.reminders;
+package es.joanmiralles.doit.business;
 
 import javax.ejb.EJBException;
 import javax.persistence.OptimisticLockException;
